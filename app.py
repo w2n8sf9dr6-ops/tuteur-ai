@@ -242,4 +242,4 @@ def page_dashboard():
     for c in ("energie", "stress"):
         sess[c] = pd.to_numeric(sess[c], errors="coerce")
     debut = sess[sess["type"] == "debut"].sort_values("date")
-    now = pd.Timestamp.
+    now = pd.Timestamp.now(tz="UTC")
